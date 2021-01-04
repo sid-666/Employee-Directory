@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Container from "./components/container";
 import Navigation from "./components/navigation";
 import EmployeeCardList from "./components/employeeCardList";
-import employees from "./data/employees.json";
+import employees from "./data/employee.json";
 
 function App() {
     const [ searchTerm, setSearchTerm ] = useState("");
