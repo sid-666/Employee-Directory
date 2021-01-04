@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import Layout from "./components/Layout";
-import Header from "./components/Header";
-import Navigation from "./components/Navigation";
-import EmployeeCardList from "./components/EmployeeCardList";
-import Footer from "./components/Footer";
+import Container from "./components/container";
+import Navigation from "./components/navigation";
+import EmployeeCardList from "./components/employeeCardList";
 import employees from "./data/employees.json";
 
 function App() {
@@ -41,8 +39,7 @@ function App() {
     const filteredEmployees = data.filter(employee => employee.name.toLowerCase().startsWith(searchTerm.toLowerCase()));
     return (
         <div>
-            <Header/>
-            <Layout>
+            <Container>
                 <h1 className="title text-5xl text-gray-800 mt-16">Employee Directory</h1>
                 <p className="mb-16 text-md">Search for an employee or sort by Name or Category.</p>
                 {/*the handleSearchTerm method and searchTerm state get passed down to the Navigation component via props with the onSearch and searchTerm props*/}
@@ -54,8 +51,7 @@ function App() {
                 />
                 {/* the employees array gets the filteredEmployees data via the data prop */}
                 <EmployeeCardList data={filteredEmployees}/>
-                <Footer/>
-            </Layout>
+            </Container>
         </div>
     )
 }
