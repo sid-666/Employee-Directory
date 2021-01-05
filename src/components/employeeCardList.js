@@ -1,8 +1,9 @@
 import React from "react";
-import EmployeeCard from "./EmployeeCard";
+import EmployeeCard from "./employeeCard";
+import "../styles/employeecard.css"
 
 
-function EmployeeCardList ({ data }) { // destructured props for easier writing of code
+function EmployeeCardList({ data }) { // destructured props for easier writing of code
     return (
         data.map(employee => (
             <EmployeeCard
@@ -13,7 +14,7 @@ function EmployeeCardList ({ data }) { // destructured props for easier writing 
                 email={employee.email}
                 phone={employee.phone}
             />
-            ))
+        ))
     )
 }
 
