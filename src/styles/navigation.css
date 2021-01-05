@@ -1,0 +1,11 @@
+.nav {
+    display:flex;
+    margin: 5px;
+    margin-bottom: 20px;
+}
+.nav > form  {
+    margin-left:auto;
+}
+.department {
+    margin-left: 10px;
+}
